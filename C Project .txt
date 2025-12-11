@@ -1,0 +1,95 @@
+
+#include <stdio.h>
+
+int main() {
+    int p1n = 256;
+    int p2n = 789;
+    
+    int p1g[3],p2g[3];
+    
+    int p1d1 =2;
+    int p1d2 =5;
+    int p1d3 =6;
+    
+    int p2d1 =7;
+    int p2d2 =8;
+    int p2d3 =9;
+    
+    printf("Enter digits for first person's number guess: \n");
+    
+    for(int i=0; i<3; i++){
+        scanf("%d", &p1g[i]);
+    }
+
+    printf("Enter digits for Second person's number guess: \n");
+    
+    for(int j=0; j<3; j++){
+        scanf("%d", &p2g[j]);
+    }
+    
+    printf("\n");
+    
+     for(int i=0; i<3; i++){
+        if(p1g[i] ==2 || p1g[i] ==5 || p1g[i] ==6){
+            printf("%d is present in number \n", p1g[i]);
+        }
+    }
+    
+    printf("\n");
+        
+    if(p1g[0] == p1d1){
+            printf("Your entered digit %d has matched place value in the number of first person \n", p1d1);
+        }
+        
+    if(p1g[1] == p1d2){
+            printf("Your entered digit %d has matched place value in the number of first person \n", p1d2);
+        }
+        
+    if(p1g[2] == p1d3){
+            printf("Your entered digit %d has matched place value in the number of first person \n", p1d3);
+        }
+    
+    printf("\n");
+    
+    if(p1g[0] ==2 && p1g[1] == 5&& p1g[2] ==6){
+            printf("congratulations!!!!! \n");
+            printf("Your guess for number %d is correct. \n", p1n);
+        }
+        
+    else{    
+          printf("Enter a new guess number for first person. \n");
+        }
+    
+    printf("\n");
+    
+    for(int i=0;i<3;i++){
+    if(p2g[i] ==7 || p2g[i] ==8 || p2g[i] ==9){
+            printf("%d is present in number \n", p2g[i]);
+        }
+    }
+    
+    printf("\n");
+    
+    if(p2g[0] == p2d1){
+            printf("Your entered digit %d has matched place value in the number of second person \n", p2d1);
+        }
+        
+    if(p2g[1] == p2d2){
+            printf("Your entered digit %d has matched place value in the number of second person \n", p2d2);
+        }
+        
+    if(p2g[2] == p2d3){
+            printf("Your entered digit %d has matched place value in the number of second person \n", p2d3);
+        }
+
+    printf("\n");
+    
+    if(p2g[0] ==7 && p2g[1] == 8&& p2g[2] ==9){
+            printf("congratulations!!!!! \n");
+            printf("Your guess for number %d is correct. \n", p2n);
+        } 
+    else{
+    printf("Enter a new guess number for second person.");
+        }
+   return 0;
+}
